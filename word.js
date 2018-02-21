@@ -7,6 +7,7 @@ function Word() {
 	this.gameEnd = true;
 	this.current = false;
 	this.makeWord = function(secret) {
+		this.array = [];
 		for (var i = 0; i < secret.length; i++) {
 			var added = new letter(secret[i]);
 			this.array.push(added);
