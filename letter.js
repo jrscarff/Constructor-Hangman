@@ -3,6 +3,10 @@ function Letter(letter) {
 	this.isGuessed = false;
 	this.right = false;
 	this.whatShown = function() {
+		if (this.secret === " ") {
+			this.isGuessed = true;
+			return this.secret
+		}
 		if (this.isGuessed) {
 			return this.secret
 		}
